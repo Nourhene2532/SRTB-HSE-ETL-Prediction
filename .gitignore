@@ -1,0 +1,20 @@
+# Secrets
+.env
+*.env
+# Données réelles (confidentielles) générées par l'ETL
+etl/data_extracted/*
+etl/data_transformed/*
+!etl/data_extracted/.gitkeep
+!etl/data_transformed/.gitkeep
+# Modèles entraînés (régénérables)
+*.pkl
+prediction/modeles/*
+!prediction/modeles/.gitkeep
+# Python / éditeur
+__pycache__/
+*.pyc
+venv/
+.venv/
+.vscode/
+.ipynb_checkpoints/
+node_modules/
