@@ -14,7 +14,7 @@ Le projet est une plateforme décisionnelle de suivi **santé-sécurité** (visi
 ```
 etl/          extraction, transformation, chargement + scripts d'exécution
 prediction/   comparaison de modèles, optimisation, résultats (graphiques et prédictions 2026)
-docs/         schéma en étoile de l'entrepôt
+docs/         schéma en constellation de l'entrepôt
 ```
 
 ## 1. ETL (dossier `etl/`)
@@ -22,7 +22,7 @@ docs/         schéma en étoile de l'entrepôt
 Pipeline Python qui alimente un entrepôt de données PostgreSQL à partir de deux bases MySQL (base globale et base santé-sécurité).
 
 1. **Extraction** (`extract.py`) : lecture des tables sources avec SQLAlchemy et export en CSV.
-2. **Transformation** (`transform.py`) : nettoyage, enrichissement (par exemple l'âge des agents) et construction des **tables de faits et des dimensions** d'un schéma en étoile (voir [`docs/schema_etoile.md`](docs/schema_etoile.md)).
+2. **Transformation** (`transform.py`) : nettoyage, enrichissement (par exemple l'âge des agents) et construction des **tables de faits et des dimensions** d'un schéma en constellation, avec deux tables de faits (accidents et visites médicales) qui partagent des dimensions communes (voir [`docs/schema_constellation.md`](docs/schema_constellation.md)).
 3. **Chargement** (`load.py`) : écriture des tables dans PostgreSQL.
 4. **Orchestration** : `run_etl.py` enchaîne les trois étapes ; `run_etl_auto.py` relance le pipeline automatiquement toutes les 2 minutes.
 
