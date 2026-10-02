@@ -1,6 +1,6 @@
-# Schéma en étoile de l'entrepôt (PostgreSQL)
+# Schéma en constellation de l'entrepôt (PostgreSQL)
 
-Structure produite par `etl/transform.py` puis chargée par `etl/load.py`. Seuls les noms de colonnes sont documentés ; aucune donnée réelle n'est publiée. Les colonnes d'authentification ne sont pas listées.
+Deux tables de faits (accidents et visites médicales) qui partagent des dimensions communes. Structure produite par `etl/transform.py` puis chargée par `etl/load.py`. Seuls les noms de colonnes sont documentés ; aucune donnée réelle n'est publiée. Les colonnes d'authentification ne sont pas listées.
 
 
 ## Tables de faits
